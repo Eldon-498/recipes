@@ -35,3 +35,11 @@ const recipesReducer = (state = initialState, action) => {
         return state;
     }
   };
+  const reducers = {
+    allRecipes: allRecipesReducer,
+    favoriteRecipes: favoriteRecipesReducer,
+    searchTerm: searchTermReducer
+  }
+  const rootReducer = combineReducers(reducers);
+  const store = createStore(rootReducer);
+  
